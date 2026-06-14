@@ -49,7 +49,7 @@
     --color-main-bg: var(--c-white);
     --color-text-dark: var(--c-grey-dark);
     --color-text-light: var(--c-white);
-    --color-hero-bg: var(--c-purple);
+    --color-header-bg: var(--c-purple);
     --color-button-primary-bg: var(--c-teal);
     --color-button-primaty-text: var(--c-grey-dark);
     --color-button-secondary-bg: var(--c-transparent);
@@ -92,6 +92,11 @@
   svg {
     max-width: 100%;
     display: block;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
   }
   .wrapper {
     width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
@@ -99,13 +104,68 @@
   }
 }
 @layer component {
+  .header {
+    background: var(--color-header-bg);
+    padding-block: 12px;
+
+    @media (width >= calc(600 / 16 * 1rem)) {
+      padding-block: 20px;
+    }
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo {
+    transition: opacity 0.5 ease;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .header-logo-img {
+    width: calc(70 / 16 * 1rem);
+
+    @media (width >= calc(600 / 16 * 1rem)) {
+      width: calc(128 / 16 * 1rem);
+    }
+  }
+  .topnav-links {
+    display: flex;
+    gap: 20px;
+    @media (width >= calc(600 / 16 * 1rem)) {
+      gap: 40px;
+    }
+  }
+  .topnav-link {
+    font-size: var(--fs-14);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    transition: text-decoration 0.5 ease;
+
+    &:hover {
+      text-decoration: underline 2px;
+      text-underline-offset: 4px;
+    }
+  }
 }
 @layer utility {
   .visually-hidden {
+    position: absolute;
     left: -10000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
+
+    &.skip:focus {
+      width: auto;
+      height: auto;
+      left: 0;
+      padding: 10px;
+      border: 1px solid;
+    }
   }
 }
