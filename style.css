@@ -305,6 +305,26 @@
       text-align: left;
     }
   }
+  /* fw-feature */
+  .fw-feature {
+    background-color: var(--color-fullwidth-bg);
+    color: var(--color-text-light);
+    text-align: center;
+  }
+  .fw-feature-title {
+    margin-block-end: 20px;
+  }
+  .fw-feature-text {
+    margin-block-end: 40px;
+  }
+  .fw-feature-img {
+    margin-inline: auto;
+    max-width: calc(792 / 16 * 1rem);
+    width: 100%;
+    /* @media (width < calc(1000 / 16 * 1rem)) {
+      width: 325px;
+    } */
+  }
 }
 @layer utility {
   .visually-hidden {
