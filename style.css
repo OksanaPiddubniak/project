@@ -50,10 +50,14 @@
     --c-teal-dark: hsl(180, 96%, 31%);
     --c-transparent: transparent;
     --c-magenta: hsl(320, 85%, 41%);
+    --c-yellow: hsl(50, 99%, 53%);
 
     --color-main-bg: var(--c-white);
     --color-text-dark: var(--c-grey-dark);
     --color-text-light: var(--c-white);
+    --color-top-tav-gradient-1: var(--c-teal);
+    --color-top-tav-gradient-2: var(--c-yellow);
+
     --color-header-bg: var(--c-purple);
     --color-button-primary-bg: var(--c-teal);
     --color-button-primary-bg-hover: var(--c-teal-dark);
@@ -247,6 +251,23 @@
     letter-spacing: 0.05em;
     color: var(--color-text-light);
     text-transform: uppercase;
+
+    &::after {
+      content: "";
+      height: 3px;
+      display: block;
+      background: linear-gradient(
+        to right,
+        var(--color-top-tav-gradient-1),
+        var(--color-top-tav-gradient-2) 80%
+      );
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
   }
   /* hero */
   .hero {
