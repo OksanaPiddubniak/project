@@ -38,6 +38,7 @@
     --font-size-button: var(--fs-18);
     --font-size-pre-title: var(--fs-20);
     --font-size-quote: var(--fs-24);
+    --font-size-form: var(var(--fs-18));
 
     @media (width >= calc(600 / 16 * 1rem)) {
       --font-size-topvan: var(--fs-16);
@@ -171,6 +172,13 @@
     display: block;
     height: auto;
   }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    border: none;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -245,6 +253,31 @@
         color: var(--color-header-bg);
       }
     }
+  }
+  /* form */
+  .form {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .form-label,
+  .form-text {
+    font-size: var(--fs-18);
+    line-height: 1;
+  }
+  .form-label {
+    font-weight: bold;
+    display: inline-block;
+    flex: 100%;
+    text-align: left;
+  }
+  .form-text {
+    padding: 8px 20px;
+    border-radius: 5px;
+    flex: 3;
+  }
+  .form-button {
+    flex: 1;
   }
   /* header */
   .header {
