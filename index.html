@@ -29,17 +29,52 @@
         </a>
 
         <nav class="topnav header-topnav">
-          <ul class="topnav-links">
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">Fitures</a>
-            </li>
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">Pricing</a>
-            </li>
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">About</a>
-            </li>
-          </ul>
+          <span id="nav-label" hidden>Navigation</span>
+          <span id="close-label" hidden>Close Navigation</span>
+          <div class="topnav-overlay"></div>
+          <button
+            id="btnOpen"
+            class="topnav-open"
+            aria-labelledby="nav-label"
+            aria-expanded="false"
+          >
+            <img src="/images/hamburger.svg" width="30" height="23" alt="" />
+          </button>
+
+          <div
+            id="menuTopNav"
+            class="topnav-menu"
+            role="dialog"
+            aria-labelledby="nav-label"
+          >
+            <button
+              id="btnClose"
+              class="topnav-close"
+              aria-labelledby="close-label"
+            >
+              <img
+                src="/images/close-button.svg"
+                width="25"
+                height="26"
+                alt=""
+              />
+            </button>
+
+            <ul class="topnav-links">
+              <li class="topnav-item">
+                <a href="#" class="topnav-link">Home</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">Fitures</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">Pricing</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">About</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -124,7 +159,7 @@
           <h2 class="fw-feature-title fullwidth-title">
             Angel investment matching in real time.
           </h2>
-          <p class="fw-feature-text fullwidth-text medium">
+          <p class="fw-feature-text fullwidth-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id
             vestibulum metus, ut pretium lacus. Phasellus ac mi magna. Sed
             scelerisque, turpis vitae.
@@ -138,18 +173,95 @@
           />
         </div>
       </section>
+      <!-- alt-features-->
+      <section class="section alt-features">
+        <div class="wrapper alt-features-wrapper">
+          <div class="alt-features-item">
+            <img
+              src="/images/laptop-check.svg"
+              alt="laptop width green check mark"
+              class="alt-features-image"
+              width="353"
+              height="345"
+            />
+            <div class="alt-features-text">
+              <h3 class="alt-features-title large">
+                <span class="alt-features-pretitle">AI-Powered Matching</span>
+                Avoid human error
+              </h3>
+              <p class="medium">
+                Ut sapien lectus, vulputate vitae lacus vel, incidunt sodales
+                ipsum. Proin a sem molestie, pulvinar ante non, laoreet ipsum.
+                Sed nec pretium est. Nunc lectus sem.
+              </p>
+            </div>
+          </div>
+
+          <div class="alt-features-item">
+            <img
+              src="/images/tablet-phone.svg"
+              alt="tablet and phone showing po-pup"
+              class="alt-features-image"
+              width="352"
+              height="345"
+            />
+            <div class="alt-features-text">
+              <h3 class="alt-features-title large">
+                <span class="alt-features-pretitle medium"
+                  >Immediate notifications</span
+                >
+                Avoid human error
+              </h3>
+              <p class="medium">
+                Lorem ipsum dolor sit amet,
+                <a href="#">consectetur adipiscing </a> elit. Sed purus neque,
+                tempor sit amet fringilla in, aliquam et justo. Aenean ac porta
+                urna. Nullam quis mattis mauris.
+              </p>
+            </div>
+          </div>
+
+          <div class="alt-features-item">
+            <img
+              src="/images/tablet-payments.svg"
+              alt="laptop width green check mark"
+              class="alt-features-image"
+              width="242"
+              height="345"
+            />
+            <div class="alt-features-text">
+              <h3 class="alt-features-title large">
+                <span class="alt-features-pretitle">Protected Payments</span>
+                Send payments from anywhere
+              </h3>
+              <p class="medium">
+                Ut sapien lectus, vulputate vitae lacus vel, tincidunt sodales
+                ipsum. <a href="#">Proin a sem mattis,</a> pulvinar ante non,
+                laoreet ipsum. Sed nec pretium est. Nunc lectus sem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- testimonial -->
-      <section class="testimonial section">
+      <section class="testimonial section dark">
         <h2 class="visually-hidden">Testimonial</h2>
         <div class="wrapper testimonial-wrapper">
           <figure class="testimonial-figure">
-            <img
-              src="/images/quotation-markl.svg"
+            <svg
+              aria-hidden="true"
+              class="testimonial-icon"
               width="78"
               height="66"
-              alt=""
-              class="testimonial-icon"
-            />
+              viewBox="0 0 78 66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="testimonial-icon-path"
+                d="M17.8829 66C11.922 66 7.41951 63.8319 4.37561 59.4957C1.45854 55.0319 0 48.8463 0 40.9391C0 31.8841 2.21951 23.913 6.65854 17.0261C11.0975 10.1391 17.8829 4.46377 27.0146 0L33.1024 12.2435C27.3951 15.1768 23.0829 18.5565 20.1659 22.3826C17.3756 26.0811 15.9805 30.8 15.9805 36.5391C16.361 36.4116 16.9951 36.3478 17.8829 36.3478C21.9414 36.3478 25.3658 37.6232 28.1561 40.1739C31.0731 42.5971 32.5317 45.9768 32.5317 50.313C32.5317 55.1594 31.1366 58.9855 28.3463 61.7913C25.5561 64.5971 22.0683 66 17.8829 66ZM62.7805 66C56.8195 66 52.3171 63.8319 49.2732 59.4957C46.3561 55.0319 44.8976 48.8463 44.8976 40.9391C44.8976 31.8841 47.1171 23.913 51.5561 17.0261C55.9951 10.1391 62.7805 4.46377 71.9122 0L78 12.2435C72.2927 15.1768 67.9805 18.5565 65.0634 22.3826C62.2731 26.0811 60.8781 30.8 60.8781 36.5391C61.2585 36.4116 61.8927 36.3478 62.7805 36.3478C66.839 36.3478 70.2634 37.6232 73.0537 40.1739C75.9707 42.5971 77.4293 45.9768 77.4293 50.313C77.4293 55.1594 76.0342 58.9855 73.2439 61.7913C70.4536 64.5971 66.9659 66 62.7805 66Z"
+              />
+            </svg>
             <blockquote class="testimonial-blockquote">
               <p class="testimonial-quote-text">
                 When I first started Evermindly, it was a bootstrapped business.
@@ -172,7 +284,178 @@
                 Founder and CEO, Evermindly
               </p>
             </figcaption>
+
+            <svg
+              aria-hidden="true"
+              class="testimonial-icon"
+              width="78"
+              height="66"
+              viewBox="0 0 78 66"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="testimonial-icon-path"
+                d="M17.8829 66C11.922 66 7.41951 63.8319 4.37561 59.4957C1.45854 55.0319 0 48.8463 0 40.9391C0 31.8841 2.21951 23.913 6.65854 17.0261C11.0975 10.1391 17.8829 4.46377 27.0146 0L33.1024 12.2435C27.3951 15.1768 23.0829 18.5565 20.1659 22.3826C17.3756 26.0811 15.9805 30.8 15.9805 36.5391C16.361 36.4116 16.9951 36.3478 17.8829 36.3478C21.9414 36.3478 25.3658 37.6232 28.1561 40.1739C31.0731 42.5971 32.5317 45.9768 32.5317 50.313C32.5317 55.1594 31.1366 58.9855 28.3463 61.7913C25.5561 64.5971 22.0683 66 17.8829 66ZM62.7805 66C56.8195 66 52.3171 63.8319 49.2732 59.4957C46.3561 55.0319 44.8976 48.8463 44.8976 40.9391C44.8976 31.8841 47.1171 23.913 51.5561 17.0261C55.9951 10.1391 62.7805 4.46377 71.9122 0L78 12.2435C72.2927 15.1768 67.9805 18.5565 65.0634 22.3826C62.2731 26.0811 60.8781 30.8 60.8781 36.5391C61.2585 36.4116 61.8927 36.3478 62.7805 36.3478C66.839 36.3478 70.2634 37.6232 73.0537 40.1739C75.9707 42.5971 77.4293 45.9768 77.4293 50.313C77.4293 55.1594 76.0342 58.9855 73.2439 61.7913C70.4536 64.5971 66.9659 66 62.7805 66Z"
+              />
+            </svg>
           </figure>
+        </div>
+      </section>
+
+      <!-- blog -->
+      <section class="section blog">
+        <div class="wrapper blog-wrapper">
+          <h2 class="blog-title">Recent blog posts</h2>
+          <div class="blog-grid">
+            <!-- blog item 1-->
+            <article class="blog-item">
+              <img
+                src="/images/blog/blog1-2x.jpg"
+                alt=""
+                srcset="/images/blog/blog1-3x.jpg 3x"
+                class="blog-image"
+                width="774"
+                height="1032"
+              />
+              <div class="blog-filter"></div>
+              <div class="blog-text">
+                <h3 class="blog-item-title">
+                  <a class="blog-link" href="#">
+                    Navigating the Angel Investment Landscape</a
+                  >
+                </h3>
+                <p class="blog-description small">
+                  Vestibulum ultrices erat est, non imperdiet velit ultricies a.
+                  Proin erat orci, lacinia a eros nec, ultricies rutrum leo.
+                </p>
+                <div class="blog-meta">
+                  <time datetime="2026-06-14" class="blog-date"
+                    >June 14, 2026</time
+                  >
+                  <p class="blog-readtime">8 min read</p>
+                </div>
+              </div>
+            </article>
+            <!-- blog item 2-->
+            <article class="blog-item">
+              <img
+                src="/images/blog/blog2-2x.jpg"
+                alt=""
+                srcset="/images/blog/blog2-3x.jpg 3x"
+                class="blog-image"
+                width="1161"
+                height="774"
+              />
+              <div class="blog-filter"></div>
+              <div class="blog-text">
+                <h3 class="blog-item-title">
+                  <a class="blog-link" href="#">
+                    The Ultimate Guide to Finding Promising Startups to Invest
+                    in</a
+                  >
+                </h3>
+                <p class="blog-description small">
+                  Etiam interdum rhoncus eros id bibendum. Duis rutrum nisl quis
+                  accumsan viverra. Morbi risus ante, convallis vel nulla ut,
+                  iaculis maximus sapien.
+                </p>
+                <div class="blog-meta">
+                  <time datetime="2026-06-14" class="blog-date"
+                    >May 21, 2026</time
+                  >
+                  <p class="blog-readtime">15 min read</p>
+                </div>
+              </div>
+            </article>
+            <!-- blog item 3-->
+            <article class="blog-item">
+              <img
+                src="/images/blog/blog3-2x.jpg"
+                alt=""
+                srcset="/images/blog/blog3-3x.jpg 3x"
+                class="blog-image"
+                width="985"
+                height="774"
+              />
+              <div class="blog-filter"></div>
+              <div class="blog-text">
+                <h3 class="blog-item-title">
+                  <a class="blog-link" href="#">
+                    Industry Insights: How to Identify Emerging Trends</a
+                  >
+                </h3>
+                <p class="blog-description small">
+                  Non imperdiet velit ultricies a. Proin erat orci, lacinia a
+                  eros nec, ultricies rutrum leo.
+                </p>
+                <div class="blog-meta">
+                  <time datetime="2026-06-14" class="blog-date"
+                    >May 9, 2026</time
+                  >
+                  <p class="blog-readtime">11 min read</p>
+                </div>
+              </div>
+            </article>
+            <!-- blog item 4-->
+            <article class="blog-item">
+              <img
+                src="/images/blog/blog4-2x.jpg"
+                alt=""
+                srcset="/images/blog/blog4-3x.jpg 3x"
+                class="blog-image"
+                width="801"
+                height="1200"
+              />
+              <div class="blog-filter"></div>
+              <div class="blog-text">
+                <h3 class="blog-item-title">
+                  <a class="blog-link" href="#">
+                    Building Connections to Uncover Investment Opportunities</a
+                  >
+                </h3>
+                <p class="blog-description small">
+                  Duis rutrum nisl quis accumsan viverra. Morbi risus ante,
+                  convallis vel nulla ut, iaculis maximus sapien.
+                </p>
+                <div class="blog-meta">
+                  <time datetime="2026-06-14" class="blog-date"
+                    >April 18, 2026</time
+                  >
+                  <p class="blog-readtime">18 min read</p>
+                </div>
+              </div>
+            </article>
+            <!-- blog item 5-->
+            <article class="blog-item">
+              <img
+                src="/images/blog/blog5-2x.jpg"
+                alt=""
+                srcset="/images/blog/blog5-3x.jpg 3x"
+                class="blog-image"
+                width="1200"
+                height="900"
+              />
+              <div class="blog-filter"></div>
+              <div class="blog-text">
+                <h3 class="blog-item-title">
+                  <a class="blog-link" href="#">
+                    Insider Tips for Finding Hidden Gems</a
+                  >
+                </h3>
+                <p class="blog-description small">
+                  Vestibulum ultrices erat est, non imperdiet velit ultricies a.
+                  Proin erat orci.
+                </p>
+                <div class="blog-meta">
+                  <time datetime="2026-06-14" class="blog-date"
+                    >March 30, 2026</time
+                  >
+                  <p class="blog-readtime">9 min read</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
       <!-- cta -->
@@ -182,14 +465,30 @@
             Get started with Mythos today
           </h2>
           <p class="cta-text fullwidth-text large">
-            Find the next undiscovered unicorn with a free 14-day trial.
+            Contact us to find the next undiscovered unicorn.
           </p>
-          <a href="#" class="button primary white cta-button">Free Trial</a>
+          <form class="form" action="#">
+            <label class="form-label" for="txtEmail">Email address</label>
+            <input
+              class="form-text"
+              type="email"
+              name="email"
+              id="txtEmail"
+              placeholder="test@test.com"
+              required
+            />
+            <button
+              type="submit"
+              class="form-button button primary white cta-button"
+            >
+              Contact
+            </button>
+          </form>
         </div>
       </section>
     </main>
     <!-- footer -->
-    <footer class="footer section">
+    <footer class="footer section" id="footer">
       <h2 class="visually-hidden">Footer</h2>
       <div class="wrapper footer-wrapper">
         <div class="footer-top">
@@ -338,6 +637,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
