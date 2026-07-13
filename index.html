@@ -29,17 +29,52 @@
         </a>
 
         <nav class="topnav header-topnav">
-          <ul class="topnav-links">
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">Fitures</a>
-            </li>
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">Pricing</a>
-            </li>
-            <li class="navnav-item">
-              <a href="#" class="topnav-link">About</a>
-            </li>
-          </ul>
+          <span id="nav-label" hidden>Navigation</span>
+          <span id="close-label" hidden>Close Navigation</span>
+          <div class="topnav-overlay"></div>
+          <button
+            id="btnOpen"
+            class="topnav-open"
+            aria-labelledby="nav-label"
+            aria-expanded="false"
+          >
+            <img src="/images/hamburger.svg" width="30" height="23" alt="" />
+          </button>
+
+          <div
+            id="menuTopNav"
+            class="topnav-menu"
+            role="dialog"
+            aria-labelledby="nav-label"
+          >
+            <button
+              id="btnClose"
+              class="topnav-close"
+              aria-labelledby="close-label"
+            >
+              <img
+                src="/images/close-button.svg"
+                width="25"
+                height="26"
+                alt=""
+              />
+            </button>
+
+            <ul class="topnav-links">
+              <li class="topnav-item">
+                <a href="#" class="topnav-link">Home</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">Fitures</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">Pricing</a>
+              </li>
+              <li class="navnav-item">
+                <a href="#" class="topnav-link">About</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -453,7 +488,7 @@
       </section>
     </main>
     <!-- footer -->
-    <footer class="footer section">
+    <footer class="footer section" id="footer">
       <h2 class="visually-hidden">Footer</h2>
       <div class="wrapper footer-wrapper">
         <div class="footer-top">
@@ -602,6 +637,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
